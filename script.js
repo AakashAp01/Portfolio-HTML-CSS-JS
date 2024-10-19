@@ -34,7 +34,7 @@ document.addEventListener("mousemove", function(e) {
 });
 
 // Check if the user is visiting for the first time
-if (localStorage.getItem('new_user')) {
+if (!localStorage.getItem('new_user')) {
     // Show the welcome message
     const welcomeMessage = document.getElementById('welcome-message');
     welcomeMessage.classList.remove('d-none');
