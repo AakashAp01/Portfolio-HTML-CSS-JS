@@ -32,3 +32,24 @@ document.addEventListener("mousemove", function(e) {
     
     body.style.backgroundImage = `radial-gradient(circle at ${x}px ${y}px, rgba(255, 0, 0, 0.2), transparent 100px)`;
 });
+
+// Check if the user is visiting for the first time
+if (localStorage.getItem('new_user')) {
+    // Show the welcome message
+    const welcomeMessage = document.getElementById('welcome-message');
+    welcomeMessage.classList.remove('d-none');
+    welcomeMessage.classList.add('show'); // Add show class for transition
+
+    // Set local storage item to prevent showing it again
+    localStorage.setItem('new_user', 'true');
+
+    // Hide the message after 3 seconds
+    setTimeout(() => {
+        welcomeMessage.classList.remove('show'); // Remove show class for fade out
+        setTimeout(() => {
+            welcomeMessage.classList.add('d-none'); // Finally hide the element
+        }, 500); // Wait for the fade-out transition to complete
+    }, 3000);
+}
+
+
