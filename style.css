@@ -107,9 +107,11 @@ body {
 .navbar-nav .nav-link:hover::before {
     width: 100%;
 }
-
+.navbar-toggler{
+    border:none;
+    color: #dc3545;
+}
 .navbar-nav .nav-link.active {
-    color: #ff0000; /* Red color for active links */
     border-bottom: 3px solid #dc3545; /* Red border for active links */
 }
 
@@ -151,14 +153,6 @@ footer {
     }
 }
 
-.skill-item {
-    margin-bottom: 20px;
-}
-
-.skill-name {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
 
 .animated-border {
     position: relative;
@@ -318,3 +312,17 @@ footer {
     animation-delay: 8s; /* Stagger the animation */
 }
 /* -------------------bg animation css finish------------------------------------------ */
+
+/* ------------------//social icon  start-------------------------------------------  */
+.social-icons a {
+    font-size: 1.5rem;
+    color: #dc3545; /* Initial red color for the icon */
+    transition:color 0.3s ease-in-out,transform 0.2s ease-in-out; /* Apply the transition to the normal state */
+}
+
+.social-icons a:hover {
+    color: var(--text-color);;
+    transform: scale(1.5); /* Enlarges icon on hover */
+}
+
+/* ------------------ End of Social Icons Styling ------------------ */
