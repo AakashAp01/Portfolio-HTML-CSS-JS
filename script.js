@@ -1,3 +1,4 @@
+AOS.init();
 $(document).ready(function() {
     // Check localStorage for the theme preference and apply it
     if (localStorage.getItem('theme') === 'light') {

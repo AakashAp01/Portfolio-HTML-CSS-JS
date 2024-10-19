@@ -1,4 +1,4 @@
-:root {
+.dark-theme {
     /* Default dark theme */
     --bg-color: #000; /* Background color */
     --text-color: #fff; /* Text color */
@@ -12,7 +12,7 @@
     --image-border-bottom:linear-gradient(to right, #dc3545, #000);
 }
 
-.light-theme {
+:root{
     /* Light theme variables */
     --bg-color: #fff; /* Background color */
     --text-color: #000; /* Text color */
@@ -42,6 +42,7 @@ body {
     padding: 0.75rem 1rem;
     transition: background-color 0.5s ease-in-out;
 }
+
 
 .navbar-brand {
     font-family: 'Montserrat', 'Arial', sans-serif;
@@ -111,6 +112,17 @@ body {
     border:none;
     color: #dc3545;
 }
+
+.navbar-toggler{
+    transform: rotate(50deg);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: none;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
+
 .navbar-nav .nav-link.active {
     border-bottom: 3px solid #dc3545; /* Red border for active links */
 }
@@ -120,12 +132,6 @@ body {
     transform: scale(1.05);
 }
 
-footer {
-    background-color: var(--footer-bg);
-    color: var(--footer-text-color);
-    padding: 2rem 0;
-    text-align: center;
-}
 
 .skills-section {
     padding: 50px 0;
@@ -261,11 +267,11 @@ footer {
 /* Animation for floating effect */
 @keyframes float {
     0% {
-        transform: translate(0, 0); /* Start at original position */
-        opacity: 0; /* Start invisible */
+        transform: translate(0, 0); 
+        opacity: 0; 
     }
     5% {
-        opacity: 0.1; /* Fade in at the start of the animation */
+        opacity: 0.1;
     }
     20% {
         transform: translate(calc(-30vw), -20vh); /* Move to left top */
@@ -280,12 +286,12 @@ footer {
         transform: translate(calc(20vw), 10vh); /* Move to right middle */
     }
     100% {
-        transform: translate(0, 0); /* Return to start */
-        opacity: 0.1; /* Keep it visible */
+        transform: translate(0, 0); 
+        opacity: 0.1; 
     }
 }
 
-/* Positioning the logos at different times */
+
 .bg-logo:nth-child(1) {
     top: 30%;
     left: 50%;
@@ -294,30 +300,30 @@ footer {
 .bg-logo:nth-child(2) {
     top: 50%;
     left: 10%;
-    animation-delay: 2s; /* Stagger the animation */
+    animation-delay: 2s;
 }
 .bg-logo:nth-child(3) {
     top: 40%;
     left: 25%;
-    animation-delay: 4s; /* Stagger the animation */
+    animation-delay: 4s;
 }
 .bg-logo:nth-child(4) {
     top: 70%;
     left: 60%;
-    animation-delay: 6s; /* Stagger the animation */
+    animation-delay: 6s; 
 }
 .bg-logo:nth-child(5) {
     top: 30%;
     left: 80%;
-    animation-delay: 8s; /* Stagger the animation */
+    animation-delay: 8s;
 }
 /* -------------------bg animation css finish------------------------------------------ */
 
-/* ------------------//social icon  start-------------------------------------------  */
+/* ------------------//footer social icon  start-------------------------------------------  */
 .social-icons a {
     font-size: 1.5rem;
-    color: #dc3545; /* Initial red color for the icon */
-    transition:color 0.3s ease-in-out,transform 0.2s ease-in-out; /* Apply the transition to the normal state */
+    color: #dc3545;
+    transition:color 0.3s ease-in-out,transform 0.2s ease-in-out; 
 }
 
 .social-icons a:hover {
@@ -325,4 +331,11 @@ footer {
     transform: scale(1.5); /* Enlarges icon on hover */
 }
 
-/* ------------------ End of Social Icons Styling ------------------ */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text-color);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* ------------------footer  End of Social Icons Styling ------------------ */
