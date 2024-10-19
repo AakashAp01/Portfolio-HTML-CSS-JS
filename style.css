@@ -34,19 +34,7 @@ body {
     background-color: #dc3545;
     color: var(--text-color);
     padding: 10px; 
-    text-align: center;
 }
-
-/* Optional: Add transition for smooth appearance */
-#welcome-message {
-    opacity: 0; /* Start hidden */
-    transition: opacity 0.5s ease;
-}
-
-#welcome-message.show {
-    opacity: 1; 
-}
-
 
 
 .about-section{
