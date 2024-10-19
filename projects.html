@@ -10,10 +10,11 @@
     <style>
         /* Custom styles for transparent card */
         .transparent-card {
-            background-color: rgba(255, 255, 255, 0); 
-            border: 1px solid red; 
-           
+            background-color: rgba(255, 255, 255, 0);
+            border: 1px solid red;
+            overflow: hidden;
         }
+
     </style>
 </head>
 
@@ -21,107 +22,105 @@
     <!-- Navbar -->
     <div id="navbar"></div>
 
-    <section class="projects-section py-5 text-danger">
+    <section class="projects-section py-5 min-vh-100">
         <div class="container">
-            <h2 class="display-5">Projects</h2>
+            <h2 class="display-5 text-danger">Projects</h2>
             <hr>
-            <div class="row mt-4">
-                <div class="col-md-4">
-                    <div class="card project-card transparent-card text-danger">
-                        <div class="carousel slide" id="carouselProject1" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="Img/color_game1.png" class="d-block w-100" alt="Project 1 Image 1">
+
+            <!-- Tabs navigation -->
+            <ul class="nav nav-tabs fw-bold" id="projectsTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active text-danger " id="js-projects-tab" data-bs-toggle="tab" data-bs-target="#js-projects" type="button" role="tab" aria-controls="js-projects" aria-selected="true">
+                        JavaScript
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link  text-danger" id="php-projects-tab" data-bs-toggle="tab" data-bs-target="#php-projects" type="button" role="tab" aria-controls="php-projects" aria-selected="false">
+                        PHP 
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link text-danger" id="laravel-projects-tab" data-bs-toggle="tab" data-bs-target="#laravel-projects" type="button" role="tab" aria-controls="laravel-projects" aria-selected="false">
+                        Laravel
+                    </button>
+                </li>
+            </ul>
+            
+            
+
+            <!-- Tab content -->
+            <div class="tab-content mt-4" id="projectsTabContent">
+                <!-- JS Projects -->
+                <div class="tab-pane fade show active" id="js-projects" role="tabpanel" aria-labelledby="js-projects-tab">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card project-card transparent-card text-danger">
+                                <div class="carousel slide" id="carouselJSProject1" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="Img/color_game1.png" class="d-block w-100" alt="JS Project 1 Image 1">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="Img/color_game2.png" class="d-block w-100" alt="JS Project 1 Image 2">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="Img/color_game3.png" class="d-block w-100" alt="JS Project 1 Image 3">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselJSProject1" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselJSProject1" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
                                 </div>
-                                <div class="carousel-item">
-                                    <img src="Img/color_game2.png" class="d-block w-100" alt="Project 1 Image 2">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="Img/color_game3.png" class="d-block w-100" alt="Project 1 Image 3">
+                                <div class="card-body">
+                                    <h5 class="card-title">A Color Clash</h5>
+                                    <p class="card-text">- Color Clash is a fast-paced and exciting color-matching game that tests your speed and accuracy. The objective is simple: match the color of the rapidly changing box with the color you've chosen.</p>
+                                    <p class="card-text">- To win, you must stop the game at the exact moment the background color of the box matches your chosen color.</p>
+                                    <a href="Projects/color_game.html" class="btn btn-outline-danger">Try It!</a>
                                 </div>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject1" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselProject1" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">A Color Clash</h5>
-                            <p class="card-text">- Color Clash is a fast-paced and exciting color-matching game that tests your speed and accuracy. The objective is simple: match the color of the rapidly changing box with the color you've chosen.</p>
-                            <p class="card-text">- To win, you must stop the game at the exact moment the background color of the box matches your chosen color.</p>
-                            <a href="Projects/color_game.html" class="btn btn-outline-danger">Try It!</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4">
-                    <div class="card project-card transparent-card">
-                        <div class="carousel slide" id="carouselProject2" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="https://via.placeholder.com/300x200?text=Project+2+Image+1" class="d-block w-100" alt="Project 2 Image 1">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://via.placeholder.com/300x200?text=Project+2+Image+2" class="d-block w-100" alt="Project 2 Image 2">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://via.placeholder.com/300x200?text=Project+2+Image+3" class="d-block w-100" alt="Project 2 Image 3">
+                <!-- PHP Projects -->
+                <div class="tab-pane fade" id="php-projects" role="tabpanel" aria-labelledby="php-projects-tab">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card project-card transparent-card text-danger">
+                                <div class="card-body">
+                                    <h5 class="card-title">PHP Project 1</h5>
+                                    <p class="card-text">- This is a PHP-based project that demonstrates server-side functionality, database interaction, and more.</p>
+                                    <a href="#" class="btn btn-outline-danger">View More</a>
                                 </div>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject2" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselProject2" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Project 2</h5>
-                            <p class="card-text">Brief description of the project.</p>
-                            <button class="btn btn-outline-danger">View More</button> <!-- Button with custom red style -->
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4">
-                    <div class="card project-card transparent-card">
-                        <div class="carousel slide" id="carouselProject3" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="https://via.placeholder.com/300x200?text=Project+3+Image+1" class="d-block w-100" alt="Project 3 Image 1">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://via.placeholder.com/300x200?text=Project+3+Image+2" class="d-block w-100" alt="Project 3 Image 2">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://via.placeholder.com/300x200?text=Project+3+Image+3" class="d-block w-100" alt="Project 3 Image 3">
+                <!-- Laravel Projects -->
+                <div class="tab-pane fade" id="laravel-projects" role="tabpanel" aria-labelledby="laravel-projects-tab">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card project-card transparent-card text-danger">
+                                <div class="card-body">
+                                    <h5 class="card-title">Laravel Project 1</h5>
+                                    <p class="card-text">- A Laravel project that demonstrates powerful features of the framework like Eloquent, middleware, and blade templates.</p>
+                                    <a href="#" class="btn btn-outline-danger">View More</a>
                                 </div>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject3" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselProject3" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Project 3</h5>
-                            <p class="card-text">Brief description of the project.</p>
-                            <button class="btn btn-outline-danger">Learn More</button> <!-- Button with custom red style -->
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
+
     <!-- Footer -->
     <div id="footer"></div>
 
